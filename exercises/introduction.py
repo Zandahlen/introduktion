@@ -87,14 +87,6 @@ def is_palindrome(words):
         return False
 
 
-def what_type(var):
-    """Returnerar en sträng med namnet av typen som variabeln 'var' tillhör.
-
-    var = 5 ska till exempel returnera strängen "integer".
-    """
-    pass
-
-
 def travel_price(distance, consumtion, price):
     """Beräknar och returnerar priset för en resa.
 

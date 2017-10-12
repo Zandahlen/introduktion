@@ -43,12 +43,12 @@ def test_is_of_age():
     assert is_of_age(17.5) == False
 
 
-#@pytest.mark.skip('Completed')
-def test_vowel():
-    assert vowel('a') == True
-    assert vowel('Y') == True
-    assert vowel('b') == False
-    assert vowel('C') == False
+@pytest.mark.parametrize('character, expected', [
+('a', True), ('e', True), ('i', True), ('o', True), ('u', True), ('y', True), ('å', True), ('ä', True), ('ö', True),
+('A', True), ('E', True), ('I', True), ('O', True), ('U', True), ('Y', True), ('Å', True), ('Ä', True), ('Ö', True),
+('k', False), ('h', False), ('x', False), ('R', False), ('r', False), ('j', False), ('C', False), ('p', False), ('T', False)])
+def test_vowel(character, expected):
+    assert vowel(character) == expected
 
 
 #@pytest.mark.skip('Completed')
